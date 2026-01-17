@@ -1,0 +1,136 @@
+==============================
+ SYSTEM SECURITY BASELINE
+==============================
+Date: Sat Jan 17 16:17:43 CET 2026
+
+=== HOSTNAME & OS ===
+ Static hostname: DESKTOP-0HMQPAC
+       Icon name: computer-container
+         Chassis: container ☐
+      Machine ID: 47043788a6f54027890bdf895b8918fe
+         Boot ID: 41f7836a1c6c4dcfb5491688999ed9f6
+  Virtualization: wsl
+Operating System: Ubuntu 24.04.3 LTS
+          Kernel: Linux 6.6.87.2-microsoft-standard-WSL2
+    Architecture: x86-64
+
+=== KERNEL VERSION ===
+6.6.87.2-microsoft-standard-WSL2
+
+=== CPU INFO ===
+Architecture:                         x86_64
+CPU op-mode(s):                       32-bit, 64-bit
+Address sizes:                        48 bits physical, 48 bits virtual
+Byte Order:                           Little Endian
+CPU(s):                               4
+On-line CPU(s) list:                  0-3
+Vendor ID:                            AuthenticAMD
+Model name:                           AMD Ryzen 3 PRO 2300U w/ Radeon Vega Mobile Gfx
+CPU family:                           23
+Model:                                17
+
+=== MEMORY INFO ===
+               total        used        free      shared  buff/cache   available
+Mem:           3.3Gi       385Mi       2.8Gi       3.5Mi       167Mi       2.9Gi
+Swap:          1.0Gi          0B       1.0Gi
+
+=== DISK USAGE ===
+Filesystem      Size  Used Avail Use% Mounted on
+none            1.7G     0  1.7G   0% /usr/lib/modules/6.6.87.2-microsoft-standard-WSL2
+none            1.7G  4.0K  1.7G   1% /mnt/wsl
+drivers         239G   99G  140G  42% /usr/lib/wsl/drivers
+/dev/sdd       1007G  2.4G  954G   1% /
+none            1.7G   92K  1.7G   1% /mnt/wslg
+none            1.7G     0  1.7G   0% /usr/lib/wsl/lib
+rootfs          1.7G  2.7M  1.7G   1% /init
+none            1.7G  488K  1.7G   1% /run
+none            1.7G     0  1.7G   0% /run/lock
+none            1.7G     0  1.7G   0% /run/shm
+none            1.7G   92K  1.7G   1% /mnt/wslg/versions.txt
+none            1.7G   92K  1.7G   1% /mnt/wslg/doc
+C:\             239G   99G  140G  42% /mnt/c
+tmpfs           338M   20K  338M   1% /run/user/1000
+
+=== NETWORK INTERFACES ===
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host 
+       valid_lft forever preferred_lft forever
+2: eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc mq state UP group default qlen 1000
+    link/ether 00:15:5d:4b:a0:ab brd ff:ff:ff:ff:ff:ff
+    inet 172.29.26.51/20 brd 172.29.31.255 scope global eth0
+       valid_lft forever preferred_lft forever
+    inet6 fe80::215:5dff:fe4b:a0ab/64 scope link 
+       valid_lft forever preferred_lft forever
+
+=== FIREWALL STATUS (UFW) ===
+UFW not installed
+Firewall Risk: [MEDIUM RISK] No firewall detected
+
+=== SSH CONFIGURATION & HARDENING ===
+SSH Server: Not installed (Common in WSL) → [LOW RISK]
+
+=== PASSWORD POLICY CHECKS ===
+PASS_MAX_DAYS: 99999
+PASS_MIN_DAYS: 0
+PASS_WARN_AGE: 7
+Password Aging Risk: [MEDIUM RISK] Passwords expire too slowly (recommended <= 90 days)
+
+--- User Password Expiry (current user) ---
+
+=== RUNNING SERVICES ===
+  UNIT                        LOAD   ACTIVE SUB     DESCRIPTION
+  console-getty.service       loaded active running Console Getty
+  cron.service                loaded active running Regular background program processing daemon
+  dbus.service                loaded active running D-Bus System Message Bus
+  getty@tty1.service          loaded active running Getty on tty1
+  polkit.service              loaded active running Authorization Manager
+  rsyslog.service             loaded active running System Logging Service
+  systemd-journald.service    loaded active running Journal Service
+  systemd-logind.service      loaded active running User Login Management
+  systemd-resolved.service    loaded active running Network Name Resolution
+  systemd-timesyncd.service   loaded active running Network Time Synchronization
+  systemd-udevd.service       loaded active running Rule-based Manager for Device Events and Files
+  unattended-upgrades.service loaded active running Unattended Upgrades Shutdown
+  user@1000.service           loaded active running User Manager for UID 1000
+
+Legend: LOAD   → Reflects whether the unit definition was properly loaded.
+        ACTIVE → The high-level unit activation state, i.e. generalization of SUB.
+        SUB    → The low-level unit activation state, values depend on unit type.
+
+13 loaded units listed.
+
+=== LOGGED-IN USERS ===
+saay     pts/1        2026-01-17 12:08
+
+=== ALL USER ACCOUNTS ===
+root
+daemon
+bin
+sys
+sync
+games
+man
+lp
+mail
+news
+uucp
+proxy
+www-data
+backup
+list
+irc
+_apt
+nobody
+systemd-network
+systemd-timesync
+dhcpcd
+messagebus
+syslog
+systemd-resolve
+uuidd
+landscape
+polkitd
+saay
